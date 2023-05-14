@@ -1,29 +1,50 @@
-# venia-test-case
+# Venia E2E 🚀
 
-Sample project to demonstrate how to evolve a test architecture on-demand.
+Welcome to the Venia E2E test project for the e-commerce Venia! This project uses Cypress for end-to-end testing. The tests were created based on Cypress version `12.0.2`.
 
-## Pre-requirements
+## Pre-requirements 📋
 
-It is required to have Node.js and npm installed to run this project.
+Before running this project, please make sure you have Node.js and npm installed on your machine.
 
-> I used versions `v19.8.1` and `9.5.1` of Node.js and npm, respectively. I suggest you use the same or later versions.
+> I used versions `v19.8.1` and `9.5.1` of Node.js and npm, respectively. I suggest you use the same versions or later.
 
-## Installation
+## Installation ⚙️
 
-Run `npm install` (or `npm i` for the short version) to install the dev dependencies.
+To install the project dependencies, simply run the following command:
 
-## Environment variable
-You will need some env variables to run the tests. Create a file named `cypress.env.json`. Example:
+```shell
+npm install
+```
 
-```json cypress.env.json
+## Environment Variables 🌐
+
+To run the tests, you need to set up some environment variables. Create a file named \`cypress.env.json\` in the project's root directory and add the following content:
+
+```json
 {
     "user_email": "YOUR_EMAIL",
     "user_password": "YOUR_PASSWORD"
 }
 ```
-## Tests
 
-Run `npm test` (or `npm t` for the short version) to run the test in headless mode.
+Replace \`YOUR_EMAIL\` with your actual email and \`YOUR_PASSWORD\` with your actual password for Venia.
 
-Or, run `npm run cy:open` to open Cypress in interactive mode.
+## Running the Tests ▶️
 
+To run the tests in headless mode, use the following command:
+
+```shell
+npm test
+```
+
+If you prefer an interactive mode where you can see the tests running, use the following command:
+
+```shell
+npm run cy:open
+```
+
+This will open Cypress in an interactive window, allowing you to select and run individual tests.
+
+Feel free to explore and modify the tests to fit your needs! Happy testing! 🎉
+___
+Created by Natália Alarcon 🐝
