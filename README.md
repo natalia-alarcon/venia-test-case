@@ -47,4 +47,4 @@ This will open Cypress in an interactive window, allowing you to select and run 
 
 Feel free to explore and modify the tests to fit your needs! Happy testing! 🎉
 ___
-Created by Natália Alarcon 🐝
+Created by [Natália](https://github.com/natalia-alarcon) 🐝
