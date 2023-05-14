@@ -1,25 +1,22 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('login', (
+    userEmail = Cypress.env('user_email'),
+    userPassword = Cypress.env('user_password')
+) => {
+    const login = () => {
+        cy.get('button[aria-label="Sign In"]').click();
+        cy.get('#email').type(userEmail);
+        cy.get('#Password').type(userPassword, {log : false});
+        cy.get('button[type="submit"]').contains('Sign In').click();
+    }
+    
+    login()
+})
+
+Cypress.Commands.add('addProduct', () => {
+    cy.get('button[title="Peach"]').click();  
+    cy.get('dl').should('contain', 'Selected Fashion Color:Peach')
+    cy.get('button[title="S"]').click();
+    cy.get('dl').should('contain', 'Selected Fashion Size:S');
+    cy.get('input[name="quantity"]').should('have.value','1');
+    cy.get('button[type="submit"]').contains('Add to Cart').click();
+})
