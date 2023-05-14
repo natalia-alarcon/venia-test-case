@@ -1,4 +1,4 @@
-describe('Test checkout flow and order history', () => {
+describe('Test checkout flow', () => {
     beforeEach(() => {
         cy.visit('/carina-cardigan.html');
         cy.addProduct();

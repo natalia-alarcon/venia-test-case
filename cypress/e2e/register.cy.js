@@ -1,6 +1,6 @@
-describe('Register page tests', () => {
+describe('Register page test', () => {
     
-    this.beforeEach(() => {
+    beforeEach(() => {
         cy.visit('/');
     })
 
